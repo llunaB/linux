@@ -98,9 +98,7 @@ cat /proc/[PID]/maps
 
 ## Process State Machine
 
-![Screen Shot 2022-06-27 at 12.33.41 AM](Process.assets/Screen Shot 2022-06-27 at 12.33.41 AM.jpg)
-
-
+![process_state_machine](Process.assets/process_state_machine.jpg)
 
 ## 좀비 State
 

@@ -31,4 +31,4 @@ IP 주소로 통신할 때 통신의 성공/실패를 나타내는 메세지 프
 
 ### TCP/IP
 
-![protocol](TCP IP 프로토콜.assets/protocol.jpg)
+![protocol](TCP_IP_protocol.assets/protocol.jpg)

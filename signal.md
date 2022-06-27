@@ -74,4 +74,4 @@ killall -SIGUSR1 [process이름]
 - ISR과 일반 함수 모두 같은 전역변수를 사용하는 경우 코드에 버그가 발생할 수 있음
 - 도중에 인터럽트가 발생하면 안되는 곳에 Interrupt Disable 처리를 해야 함
 
-![Interrupt_disable](signal.assets/Interrupt_disable.jpg)
+![Interrupt_disable](Signal.assets/Interrupt_disable.jpg)
