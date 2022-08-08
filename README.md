@@ -1,3 +1,7 @@
+# Basics
+
+
+
 # Commands
 
 ## history : 이전 기록 확인
