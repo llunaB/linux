@@ -65,6 +65,39 @@
 
 
 
+## 파일 종류
+
+- 디렉터리
+- 심볼링 링크
+  - 하드링크
+  - 심볼릭 링크
+
+
+
+## redirection
+
+```bash
+ls -l test2 >> out.log 2>&1   
+```
+
+
+
+## 사용자
+
+```bash
+sudo chown 사용자 대상
+```
+
+
+
+## 권한
+
+- rwx rwx rwx
+- unmask 개념
+- SetUID, SetGID, Sticky Bit
+
+
+
 # Commands
 
 ## history : 이전 기록 확인
