@@ -76,6 +76,12 @@
 
 ## redirection
 
+비에러와 에러를 모두 저장한다.
+
+1은 정상, 2는 에러
+
+`>` 는 덮어쓰기 `>>` 는 이어쓰기
+
 ```bash
 ls -l test2 >> out.log 2>&1   
 ```
@@ -98,9 +104,183 @@ sudo chown 사용자 대상
 
 
 
-# grep, awk
+# 권한관리
 
-s
+## chmod
+
+```bash
+chmod 권한 파일명
+```
+
+유저, 그룹, 기타에 모두 실행권한 부여 및 제거
+
+```bash
+chmod 775 file
+chmod a+x file
+chmod ugo=rwx file
+```
+
+
+
+## SetUID
+
+파일 실행 시 소유자(루트) 권한으로 실행한다.
+
+유저에게 uid 비트 세팅
+
+```bash
+sudo chmod u+s file
+sudo chmod 4755 file
+
+sudo chmod u-s file
+sudo chmod 0755 file
+```
+
+
+
+## SetGID
+
+파일 실행 시 그룹 권한으로 실행한다.
+
+```bash
+sudo chmod g+s file
+sudo chmod 2755 file
+
+sudo chmod g-s file
+sudo chmod 0755 file
+```
+
+
+
+## Sticky Bit
+
+그룹에 권한을 준다.
+
+```bash
+chmod +t shared
+sudo chmod 1775 shared
+
+chmod -t shared
+sudo chmod 0775 shared
+```
+
+
+
+
+
+# USE
+
+## sort
+
+```bash
+sork -t "separator" -k 필드넘버 파일명
+```
+
+
+
+## cut
+
+특정 구분자를 기준으로 필드 데이터를 반환
+
+```bash
+cut -d 'separator' -f 필드넘버 파일명
+```
+
+
+
+## compare
+
+```bash
+comm old_file new_file
+```
+
+
+
+## diff
+
+```bash
+diff -c old_file new_file
+
+$ diff -Naur old_file new_file > patchfile
+$ patch < patchfile
+```
+
+
+
+## find
+
+```bash
+find 경로 -name 파일명 -exec 실행명령어 "{}" ";"
+```
+
+
+
+
+
+# grep, awk, sed
+
+## grep
+
+```bash
+grep 찾는문자 파일
+grep -v 찾는문자 파일
+grep -n 라인까지 출력
+grep '정규표현식' 파일
+grep "$변수명" 파일
+```
+
+
+
+## awk
+
+```bash
+awk '찾는패턴{실행문}' 파일
+```
+
+block
+
+```bash
+awk 'BEGIN{FS=":";OFS="\t"}{print $1,$7}END{print NR}' /etc/passwd
+```
+
+separator
+
+```bash
+awk -F: '$2>499{print $1}'
+```
+
+
+
+## sed
+
+```bash
+sed 's\찾을문자열\바꿀문자열\'
+```
+
+
+
+
+
+# Redirection
+
+에러 로그에 기록하기
+
+```bash
+ls -l 에러나는경우 2>> 에러.log
+```
+
+
+
+# Chown
+
+```bash
+sudo chown 바꿀유저 바꿀파일 #유저만 변경
+sudo chown 바꿀유저: 바꿀파일 #그룹까지 변경
+```
+
+
+
+
 
 # Commands
 
