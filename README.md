@@ -98,6 +98,10 @@ sudo chown 사용자 대상
 
 
 
+# grep, awk
+
+s
+
 # Commands
 
 ## history : 이전 기록 확인
