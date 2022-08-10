@@ -76,13 +76,12 @@
 
 ## redirection
 
-비에러와 에러를 모두 저장한다.
-
 1은 정상, 2는 에러
 
 `>` 는 덮어쓰기 `>>` 는 이어쓰기
 
 ```bash
+# 비에러와 에러를 모두 저장한다.
 ls -l test2 >> out.log 2>&1   
 ```
 
@@ -91,7 +90,7 @@ ls -l test2 >> out.log 2>&1
 ## 사용자
 
 ```bash
-sudo chown 사용자 대상
+sudo chown 사용자 대상파일
 ```
 
 
@@ -109,10 +108,10 @@ sudo chown 사용자 대상
 ## chmod
 
 ```bash
-chmod 권한 파일명
+chmod 권한 대상파일
 ```
 
-유저, 그룹, 기타에 모두 실행권한 부여 및 제거
+유저, 그룹, 기타에 모두 실행권한 부여
 
 ```bash
 chmod 775 file
@@ -198,6 +197,8 @@ comm old_file new_file
 
 ## diff
 
+두 파일의 차이를 patchfile 이란 파일로 만들고 패치 해보자.
+
 ```bash
 diff -c old_file new_file
 
@@ -208,6 +209,8 @@ $ patch < patchfile
 
 
 ## find
+
+찾은 결과를 실행해보자.
 
 ```bash
 find 경로 -name 파일명 -exec 실행명령어 "{}" ";"
