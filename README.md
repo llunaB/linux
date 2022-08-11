@@ -283,6 +283,8 @@ sudo chown 바꿀유저: 바꿀파일 #그룹까지 변경
 
 
 
+# continue...
+
 
 
 # Commands
